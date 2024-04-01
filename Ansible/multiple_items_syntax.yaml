@@ -1,0 +1,11 @@
+---
+ - name: Install Multiple Packeges
+   hosts: localhost
+   tasks:
+    - name: Install Packages
+      apt:
+       name: "{{item}}"
+       state: present
+      with_items:
+       - apache2
+       - ufw

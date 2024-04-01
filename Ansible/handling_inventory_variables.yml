@@ -1,0 +1,20 @@
+---
+- name: Display Info
+  hosts: localhost
+  gather_facts: true
+  vars:
+    greetings: "WELCOME"
+    error_msg: ""
+
+  tasks:
+    - name: Display System Info
+      debug:
+        msg: "OS Info - {{ ansible_system }}"
+
+    - name: Display Hostname in Ansible
+      debug:
+        msg: "Hostname in Ansible - {{ ansible_hostname }}"
+
+    - name: Display Hostname in Inventory
+      debug:
+        msg: "Hostname in Inventory - {{ inventory_hostname }}"

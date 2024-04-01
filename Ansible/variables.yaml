@@ -1,0 +1,10 @@
+---
+ - name: "varaibles"
+   hosts: localhost
+   vars:
+    - username: Ansible
+    - home: /home/osboxes/ansible/variables.yaml
+   tasks:
+    - name: print variable
+      debug:
+       msg: "Username : {{username}}, Home path : {{home}}"
